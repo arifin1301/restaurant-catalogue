@@ -1,4 +1,7 @@
 @media screen and (min-width: 650px) {
+  .jumbotron {
+    background:url('/image/hero/hero-image_4-small.jpg');
+  }
   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
@@ -65,6 +68,9 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .jumbotron {
+    background:url('/image/hero/hero-image_4-large.jpg');
+  }
   .restaurants {
     grid-template-columns: repeat(4, 1fr);
   }
