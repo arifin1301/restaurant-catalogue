@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurant-db';
-import { createRestaurantDetailTemplate, createReviewsTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
@@ -20,12 +20,6 @@ const Detail = {
     const restaurant = await RestaurantDbSource.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector('#restaurant');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
-
-    const reviewContainer = document.querySelector('#review-restaurant');
-    const reviewItem = restaurant.customerReviews;
-    reviewItem.forEach((restaurantItem) => {
-      reviewContainer.innerHTML += createReviewsTemplate(restaurantItem);
-    });
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),

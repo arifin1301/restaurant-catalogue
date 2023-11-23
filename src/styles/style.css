@@ -100,7 +100,7 @@ body {
 */
 
 .jumbotron {
-  height: 25rem;
+  min-height: 370px;
   display: grid;
   place-items: center;
   background-image: url("../public/image/hero/hero-image_4.jpg");
@@ -215,38 +215,37 @@ main {
   margin: 8px 0;
 }
 
-
 /* 
-  Review Restaurant
+  review versi 2
 */
-.review-restaurant{
-  display: grid;
-  margin: 2rem auto;
-  width: 100%;
-  max-width: 800px;
-  grid-template-columns: 1fr;
-  gap: 18px 16px;
+
+.customer-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Menggunakan Flexbox dengan space-between */
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #72440033;
 }
 
-.review-restaurant .card-review {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 16px;
+.review-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
 }
 
-.review-restaurant .card-review .profil {
-  margin-bottom: 1rem;
+.customer-review .bold-name {
+  font-weight: bold;
+  margin-right: 5px;
 }
 
-
-
-.review-restaurant .card-review .profil p {
-  color: #535353;
+.customer-review .date {
+  font-style: italic;
   font-size: 14px;
 }
-
-
-
 
 /*
   Footer
